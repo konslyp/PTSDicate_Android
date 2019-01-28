@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header_back_done" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:text="File Name With Date Format:"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/theme_color_grey" />
+
+    <TextView
+        android:id="@+id/screen_file_naming_file_name_model_TXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:text="anglertest201_20150219.wav"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/theme_color_grey"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20dp"
+        android:background="@color/footer_title_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_title_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/theme_title_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="File Name"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/theme_color_grey"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/screen_file_naming_file_name_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHHIJKLMNOPQRSTUVWXYZ1234567890 "
+                android:background="@color/theme_title_color"
+                android:text="anglertest201"
+                android:singleLine="true"
+                android:maxLength="100"
+                android:imeOptions="actionDone"
+                android:textColor="@color/theme_color_grey" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/footer_title_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/theme_title_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Date Format"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/theme_color_grey"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/screen_file_naming_date_format_SPN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/theme_title_color"
+                android:entries="@array/filenameformat"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/theme_color_grey" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/footer_title_grey" />
+    </LinearLayout>
+
+</LinearLayout>

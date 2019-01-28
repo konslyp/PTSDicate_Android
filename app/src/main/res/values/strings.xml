@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">PTS Dictate</string>
+
+    <string name="crash_report">Something Crash on app. Please send report to my email.</string>
+
+
+    <string name="Update_NameSpace">Case=PasswordUpdate</string>
+    <string name="FileSize">File size : </string>
+
+
+    <string name="read_error">Error</string>
+    <string name="play_error">Play Error!!!</string>
+    <string name="bad_extension_error">Sorry, not yet able to edit files of type</string>
+    <string name="no_extension_error">Sorry, can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+    <string name="start_marker">Start marker</string>
+    <string name="end_marker">End marker</string>
+    <string name="time_seconds">seconds</string>
+
+    <!-- Progress dialog text for loading or saving... -->
+    <string name="progress_dialog_loading">Loading...</string>
+    <string name="progress_dialog_saving">Saving...</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Title_MainMenu">Main Menu</string>
+    <string name="Title_Login">PTS Dictate</string>
+
+    <!-- SCREEN LOGIN -->
+    <string name="Voice_recorder_file">Your recording file</string>
+    <string name="Voice_recorder_description_file">Enter Comment</string>
+    <string name="Voice_recorder_ok">Ok</string>
+    <string name="Voice_recorder_save">Save</string>
+    <string name="Voice_recorder_cancel">Discard</string>
+    <string name="Voice_recorder_your_desc">Comments</string>
+    <string name="Voice_recorder_max_limit">Max File Size Limit: 80Mb</string>
+
+    <!-- SplashScreen -->
+    <string name="Alert_Welcome_Tiltle">No SD card found</string>
+    <string name="Alert_Welcome_Message">Need SDCard to start the App</string>
+    <string name="Voice_Record_continue_record">Continue\nRecord</string>
+    <string name="Voice_Record_edit_record">Edit\nRecord</string>
+
+    <!-- About -->
+    <string name="About_Version_txt">App Version</string>
+    <string name="About_Version_no">2.0.0</string>
+    <string name="About_last_update">App Last Updated Date</string>
+    <string name="About_last_update_date">18/05/2014</string>
+    <string name="About_last_update_contact_us">Contact Us</string>
+    <string name="About_last_update_help_us">Help</string>
+
+    <!-- Contact Us -->
+    <string name="Contact_us_phone">Phone</string>
+    <string name="Contact_us_email">Email</string>
+    <string name="Contact_us_web">Website</string>
+    <string name="Contact_us_help">Help</string>
+    <string name="Contact_us_phone_number">0401 144 119</string>
+    <string name="Contact_us_email_address">pts@etranscriptions.com.au</string>
+    <string name="Contact_us_web_address">www.etranscriptions.com.au</string>
+    <string name="Contact_us_help_doc">https://www.etranscriptions.com.au</string>
+
+    <!-- Settings -->
+
+    <string name="settings_audio_quality">Audio Quality</string>
+    <string name="Settings_Toast_Saved">Settings updated successfully</string>
+    <string name="Settings_Toast_Password_update">Password updated successfully</string>
+    <string name="Settings_Toast_File_Name">Updated successfully</string>
+    <string name="Settings_alert_File_Name">Do you want to update your detail?</string>
+    <string name="Settings_Archivedays">Enter archive days</string>
+    <string name="Settings_Profile">Profile</string>
+    <string name="Settings_Voice_activation">Voice Activation Auto Pause</string>
+    <string name="Settings_FileName">File naming format</string>
+    <string name="Settings_KeepFile">Keep file after upload</string>
+    <string name="Settings_Archive">Archive</string>
+    <string name="Settings_Upload_WIFI">Upload via WIFI only</string>
+    <string name="Settings_FileNaming_name">File name</string>
+    <string name="Settings_Profile_Login_name">Login Id</string>
+    <string name="Settings_Profile_password">Password</string>
+    <string name="Settings_Profile_UserName">User name</string>
+    <string name="Settings_Profile_Email">Email</string>
+    <string name="Settings_Profile_screen_title">Profile</string>
+    <string name="Settings_file_name_screen_title">File naming format</string>
+    <string name="microphone_sensitivity_definition">This setting defines a threshold/noise level when the recorder automatically starts recording. For quiet surroundings use a low threshold. For loud surroundings use a higher threshold.</string>
+
+    <!-- Validation -->
+    <string name="INTERNET_NOT_AVAILABLE">Network is not available.Please try again later</string>
+    <string name="WIFI_NOT_AVAILABLE">WIFI connection not available. Using 3G/4G connection instead</string>
+    <string name="Email_Mismatch">Please enter a valid email address</string>
+    <string name="Settings_file_name_Validate">Enter the file name to update</string>
+
+    <!-- Progress Dialog -->
+    <string name="Loading">Loading…</string>
+    <!-- <string name="Progress_Dialog">Please wait&#8230; Loading&#8230; </string> -->
+    <string name="Progress_Dialog_Loggin">Logging in…</string>
+    <string name="Progress_Dialog_Updating">Updating profile… </string>
+    <string name="Progress_Dialog_Updated_success">Profile updated successfully</string>
+    <string name="Progress_Dialog_Updated_failed">Profile update failed</string>
+    <!-- Grid -->
+    <string name="Grid_new">New</string>
+    <string name="Grid_Existing">Existing Dictations</string>
+    <string name="Grid_Uploads">Uploads Pending</string>
+    <string name="Grid_Settings">Settings</string>
+    <string name="Grid_Player">Player</string>
+    <string name="Grid_Logout">Logout</string>
+    <string name="Grid_Record">Record</string>
+    <string name="Edit_Record">Edit Record</string>
+    <string name="Grid_About">About</string>
+    <string name="Grid_Contact_us">Contact Us</string>
+    <string name="Grid_Help_us">Help</string>
+
+
+
+    <!-- SCREEN LOGIN -->
+    <string name="UserName">Enter your user name</string>
+    <string name="Password">Enter your password</string>
+    <string name="username_alert">User name should not be empty</string>
+    <string name="password_alert">Password should not be empty</string>
+    <string name="ButtonLogin">Login</string>
+    <string name="CheckboxText">Remember me</string>
+    <string name="title_activity_sample">Sample</string>
+    <string name="title_activity_ptsnew">PTSNewActivity</string>
+    <string name="title_activity_ptssettings">PTSSettingsActivity</string>
+    <string name="title_activity_ptsprofile_settings">PTSProfileSettings</string>
+    <string name="Alert_Login_InvalidUserandPassword">Invalid Username/password</string>
+    <string name="title_activity_ptsfile_name_setting">PTSFileNameSetting</string>
+    <string name="Login_NameSpace">Case=loginCheck</string>
+
+    <!-- Home Screen -->
+    <string name="Alert_Home_title">Logout</string>
+    <string name="Alert_Logout">Are you sure want to Logout?</string>
+
+    <!-- ALERT -->
+    <string name="Alert_App_name">PTS Dictate</string>
+    <string name="No_Space_Accepts">Invalid file name</string>
+    <string name="Alert_No_SD">Insert SD CARD</string>
+    <string name="Alert_No_SD_not_access">Cannot access SDCARD</string>
+    <string name="Alert_NO_DIR">No such directory found</string>
+    <string name="Alert_NO_Files">No files found</string>
+    <string name="Alert_NO_Uploads">No uploads found</string>
+    <string name="Alert_settings">Do you want to save the archive days?</string>
+    <string name="Alert_save_file">Do you want to save the current Recording?</string>
+    <string name="Alert_save_after_call">Due to telephone call please save and then continue the recording.</string>
+    <string name="Alert_discard_file">Do you want to discard the current Recording?</string>
+    <string name="Alert_MAX_file_size">The 80Mb file size limit is reached. The file is being saved</string>
+    <string name="Alert_Warning_file_size">Warning: You are approaching your file size upload limit of 80Mb</string>
+    <string name="Alert_valid_password">Enter a Valid Password</string>
+    <string name="ALERT_TITLE">PTS Dictate</string>
+    <string name="ALERT_TITLE_network_error">Network Alert</string>
+    <string name="ALERT_Already_uploaded">Are you sure you want to re-upload?</string>
+    <string name="ALERT_BOX_CANCEL_BUTTON">CANCEL</string>
+    <string name="ALERT_OK_BUTTON">OK</string>
+    <string name="ALERT_No_Recordings_to_play">No More Recordings to play</string>
+    <string name="ALERT_Server_Unreachable">Server UnReachable</string>
+    <string name="ALERT_Delete">Are you sure want to Delete?</string>
+    <string name="ALERT_Upload_progress_Incomplete1">Still uploading files not completed</string>
+    <string name="ALERT_LowVocalRange">Low vocal range detected</string>
+    <string name="ALERT_HighVocalRange">High vocal range detected</string>
+    <string name="Alert_Pause">Please stop the player</string>
+    <string name="Alert_Play">Please start the player</string>
+    <string name="Alert_No_Space">No space left on device</string>
+    <string name="ALERT_overwriting_at_end">Overwrite - Cannot start at end of the audio file</string>
+    <string name="ALERT_erase_at_end">ERASE - Cannot start at end of the audio file</string>
+    <string name="ALERT_erase_time_conflict">ERASE - End erase timeshould be greater than Start erase time!</string>
+
+    <string name="alert_for_append">Append complete</string>
+    <string name="alert_for_insert">Insert complete</string>
+    <string name="alert_for_Overwrite">Overwriting complete</string>
+    <string name="alert_for_partial_del">Partial Delete complete</string>
+
+    <!-- Upload -->
+
+    <string name="Upload_Exceed_File_size">size exceeds the limit</string>
+    <string name="Upload_File_select">Please select atleast one file</string>
+    <string name="title_activity_ptsexisting">PTSExisting</string>
+    <string name="title_activity_ptsplayer_list">PTSPlayerList</string>
+    <string name="title_activity_ptsabout">PTSAboutActivity</string>
+    <string name="title_activity_ptscontact_us">PTSContactUs</string>
+    <string name="title_activity_ptshelp">PTSHelpActivity</string>
+    <string name="title_activity_ptsedit_recording">PTSEditRecording</string>
+    <string name="ok">Ok</string>
+
+    <array name="filenameformat">
+        <item>"ddMMyyyy"</item>
+        <item>"ddyyyyMM"</item>
+        <item>"MMddyyyy"</item>
+        <item>"MMyyyydd"</item>
+        <item>"yyyyddMM"</item>
+        <item>"yyyyMMdd"</item>
+    </array>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="setting_edit_option_help">Disable Editing Help Screens</string>
+
+    <string name="edit_option_title_append">Append</string>
+    <string name="edit_option_title_insert">Insert</string>
+    <string name="edit_option_title_overwrite">Overwrite</string>
+    <string name="edit_option_title_partal_del">Partial Delete</string>
+    <string name="alert_for_edit_option_append">When the append function is selected,the cursor will automatically move to the end of the original recording.If you want the Append to start at different point, move the cursor to a  desire point and tap the orange Record button to start the Append function.</string>
+    <string name="alert_for_edit_option_insert">To start insert, tap the Start Point button marker whilst listening to the audio. Tap the Start Inserting button to initiate the insert. The insert will end when the orange Stop button is tapped.</string>
+    <string name="alert_for_edit_option_overwrite">To start overwrite, tap the Start point and End Point button markers whilst listening to the audio. The End point button determines where the overwrite finishes. Tap the Start Overwriting button to initiate the overwrite. The overwrite will end when the End Point marker is reached.</string>
+    <string name="alert_for_edit_option_partial_del">To start partial delete, tap the Start Point and End Point button markers whilst listening to the audio. The End Point button determines where the partial delete finishes. Tap the Start Deleting button to initiate the partial delete. The partial delete will end when the End Point markers is reached.</string>
+
+
+    <string name="label_password_creation_header">Password Creation Guide</string>
+    <string name="label_password_creation_hint">A Password must:</string>
+    <string name="label_password_creation_length">have a min.length of 5 characters</string>
+    <string name="label_password_creation_uppercase">contain at least one upper case</string>
+    <string name="label_password_creation_digit">contain at least one digit</string>
+    <string name="label_password_creation_special_char">contain at least one special character eg. @, #, $, %, &amp;, * etc.</string>
+    <string name="label_call_interruption">Due to phone call interrupt</string>
+    <string name="label_music_interruption">Due to Music call interrupt</string>
+    <string name="label_for_audio_quality">Note that higher resolution results in larger files.</string>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/theme_title_color"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/header_back_BTN"
+            android:layout_width="75dp"
+            android:layout_height="63dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-15dp"
+            android:background="@android:color/transparent"
+            android:onClick="OnBackButtonClick"
+            android:padding="13dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/style_back_btn" />
+
+        <TextView
+            android:id="@+id/title_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="Existing Dictations"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/app_theme_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/inflate_header_done_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="Done"
+            android:textColor="@drawable/style_click_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/theme_color_grey" />
+
+</LinearLayout>

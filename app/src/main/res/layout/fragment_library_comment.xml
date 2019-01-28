@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_title_color">
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/header"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_edit_comment_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Edit Comments"
+                        android:textColor="@color/theme_color_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/light_grey_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="20dp"
+                            android:src="@drawable/icn_comments" />
+
+                        <EditText
+                            android:id="@+id/screen_existing_comments_EDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_grey_bg"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:minHeight="120dp"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHHIJKLMNOPQRSTUVWXYZ1234567890.&amp; \n"
+                            android:textColor="@color/theme_color_grey">
+                            <requestFocus />
+                        </EditText>
+                    </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    <LinearLayout
+        android:id="@+id/screen_record_save_discard_lay"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/theme_title_color"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/screen_existing_comments_save_button"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:background="@drawable/style_btn_save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/screen_existing_comments_discard_button"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:background="@drawable/style_discard_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

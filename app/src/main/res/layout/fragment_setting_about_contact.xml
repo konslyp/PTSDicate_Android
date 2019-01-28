@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/inflate_header_back_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@color/theme_title_color"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/footer_title_grey" />
+
+            <RelativeLayout
+                android:id="@+id/screen_settings_contact_phone1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_settings_lay_click"
+                android:tag="1300 768 476">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icn_phone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:padding="15dp"
+                    android:text="1300 768 476  (AUS)"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40dp"
+                android:background="@color/footer_title_grey" />
+
+            <RelativeLayout
+                android:id="@+id/screen_settings_contact_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_settings_lay_click"
+                android:tag="0800 884 323">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icn_phone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:padding="15dp"
+                    android:text="0800 884 323  (NZ)"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40dp"
+                android:background="@color/footer_title_grey" />
+
+            <RelativeLayout
+                android:id="@+id/screen_settings_contact_email1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_settings_lay_click"
+                android:tag="marketing@etranscriptions.com.au">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icn_email" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:padding="15dp"
+                    android:text="ptshelpdesk@outlook.com"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="40dp"
+                android:background="@color/footer_title_grey" />
+
+            <RelativeLayout
+                android:id="@+id/screen_settings_contact_email2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_settings_lay_click"
+                android:tag="ptshelpdesk@outlook.com">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icn_email" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:padding="15dp"
+                    android:text="info@etranscriptions.com.au"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/footer_title_grey" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

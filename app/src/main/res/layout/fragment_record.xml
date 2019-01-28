@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aw="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/screen_record_save_discard_lay"
+        android:layout_below="@+id/header"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/screen_record_editing_options_RGRP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RadioButton
+                    android:id="@+id/screen_record_append_RBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginRight="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_radiobtn_left"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Append"
+                    android:textColor="@drawable/style_textcolor_radiobtn"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/screen_record_insert_RBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_radiobtn_middle"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Insert"
+                    android:textColor="@drawable/style_textcolor_radiobtn"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/screen_record_overwrite_RBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_marginRight="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_radiobtn_middle"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Overwrite"
+                    android:textColor="@drawable/style_textcolor_radiobtn"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/screen_record_partial_delete_RBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_radiobtn_right"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Partial Delete"
+                    android:textColor="@drawable/style_textcolor_radiobtn"
+                    android:textSize="11sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/playback_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/screen_record_mediaplayer_currentposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:textColor="@color/theme_color_grey" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/theme_color_grey" />
+
+                <TextView
+                    android:id="@+id/screen_record_mediaplayer_total_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:textColor="@color/theme_color_grey" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relBarRecord"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/screen_record_LedIndicatorBar_LAY"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/style_led_indicator"
+                        android:orientation="vertical"
+                        android:padding="2dp">
+
+                        <com.songu.ptsdictate.view.VULedIndicatorBar
+                            android:id="@+id/screen_record_LedIndicatorBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/screen_record_waveformViewLAY"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/screen_record_startEraseBTN"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/style_erase_btn"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/screen_record_startsBTN"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/style_overwrite_btn"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/screen_record_starts_insert_BTN"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_clear_disable"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/screen_record_bookmarks_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                >
+
+                <com.songu.ptsdictate.view.BookmarkView
+                    android:id="@+id/screen_record_bookmarks_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    custom:bookmarksCount="20" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/screen_record_bookmark_controls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/screen_record_bookmark_previous"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/style_bookmark_previous" />
+
+                        <ImageView
+                            android:id="@+id/screen_record_bookmark_btn"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/style_bookmark_btn" />
+
+                        <ImageView
+                            android:id="@+id/screen_record_bookmark_next"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/style_bookmark_next" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/screen_record_delete_bookmark_BTN"
+                        android:layout_width="130dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/screen_record_bookmark_controls"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/style_clear_bookmark_button"
+                        android:enabled="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/screen_record_record_btn_LAY"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/screen_record_record_pause_BTN"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icn_record" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/screen_record_stop_btn_LAY"
+                    android:layout_toRightOf="@+id/screen_record_record_btn_LAY"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.songu.ptsdictate.view.TimerTextView
+                        android:id="@+id/screen_record_overwriting_timer_CHRM"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/theme_color_hover"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:visibility="invisible" />
+
+                    <com.songu.ptsdictate.view.TimerTextView
+                        android:id="@+id/screen_record_recording_timer_CHRM"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/theme_color_grey"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/screen_record_recording_status_TXT"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/theme_color_grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/screen_record_stop_btn_LAY"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/screen_record_stoprecording_BTN"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/style_stop_record" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/screen_record_double_rew"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/style_media_fast_rewind" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/screen_record_rew"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/style_media_rewind" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/screen_record_play_IMGBTN"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/icn_media_play"
+                        android:textOff=""
+                        android:textOn=""
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/screen_record_fwd"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/style_media_forward" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/screen_record_double_fwd"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/style_media_fast_fwd" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File Name"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/screen_record_file_name_TXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File Size"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/screen_record_file_size_TXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.0 MB"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Max File Size Limit"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/screen_record_file_size_limit_TXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="80 MB"
+                    android:textColor="@color/theme_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/screen_record_save_discard_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_light_grey"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/screen_record_recording_save_button"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@drawable/style_btn_save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/screen_record_recording_edit_button"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@drawable/style_btn_edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/screen_record_recording_discard_button"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@drawable/style_discard_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

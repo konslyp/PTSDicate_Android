@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_add_BTN_lay"
+
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/theme_title_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/header_add_BTN"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/style_icn_plus" />
+
+        <CheckBox
+            android:id="@+id/header_select_all_CHBX"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/style_checkbox"
+            android:button="@null"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/title_IMG"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icn_existing_dictations"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/title_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/title_IMG"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/app_theme_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/header_add_BTN_lay"
+        android:background="@color/theme_color_grey" />
+
+</RelativeLayout>

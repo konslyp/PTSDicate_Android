@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f00">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PTS Dictate"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                />
+            <!--<net.frakbot.blinktextview.BlinkTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="PTS Dictate"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="14sp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="25dp"-->
+                <!--android:textStyle="bold"/>-->
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

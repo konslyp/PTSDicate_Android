@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#F75527</color>
+    <color name="colorPrimary">#F75527</color>
+    <color name="colorPrimaryDark">#F75527</color>
+
+
+    <color name="app_theme_color">#F75527</color>
+    <color name="theme_title_color">#FFFFFF</color>
+    <color name="footer_title_grey">#A0A0A0</color>
+    <color name="light_grey_bg">#E6E6E6</color>
+    <color name="list_color_green">#ff054e18</color>
+    <color name="theme_color_hover">#fff72f0d</color>
+    <color name="theme_color_grey">#ff474747</color>
+    <color name="theme_light_grey">#D1D1D1</color>
+
+
+
+    <!-- Colors For Alert -->
+    <color name="red_color_alert">#CA0418</color>
+    <color name="green_color_alert">#66990B</color>
+    <color name="confirm">#FF8800</color>
+    <color name="info">#669900</color>
+
+
+
+</resources>
